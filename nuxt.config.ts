@@ -4,6 +4,10 @@ import { defineNuxtConfig } from 'nuxt3'
 export default defineNuxtConfig({
   meta: {
     title: 'my-blog',
+    meta: [],
+    script: [],
+    link: [],
+    style: []
   },
   buildModules: [
     '@vueuse/nuxt',
@@ -19,5 +23,5 @@ export default defineNuxtConfig({
       target: 'https://api.123mtr.top',
       changeOrigin: true,
     },
-  },
+  }
 })
