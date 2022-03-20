@@ -7,11 +7,11 @@ import type {
 
 import { createFetch } from '@vueuse/core'
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJpYXQiOjE2NDc2MTQ0NDUsImV4cCI6MTY0ODIxOTI0NX0.0WMvBdoU_cKYtPZWDuFpz7JrNbv0-iDR_BCfcQY241s'
 
 // 请求拦截
-const beforeFetch = async ({ options, cancel }: BeforeFetchContext) => {
+const beforeFetch = async ({ url, options, cancel }: BeforeFetchContext) => {
   // const myToken = localStorage.getItem('token')
+  // const token = '123123'
 
   // if (!myToken)
   //   cancel()
@@ -21,7 +21,7 @@ const beforeFetch = async ({ options, cancel }: BeforeFetchContext) => {
     // Authorization: `Bearer ${token}`,
   }
 
-  return { options }
+  return { url, options }
 }
 
 // 响应拦截
@@ -46,7 +46,7 @@ export default createFetch({
     onFetchError,
   },
   fetchOptions: {
-    mode: 'no-cors', // "cors" | "navigate" | "no-cors" | "same-origin";
-    credentials: 'include', // 请求时携带 cookie 值
+    mode: 'cors', // "cors" | "navigate" | "no-cors" | "same-origin";
+    // credentials: 'include', // 请求时携带 cookie 值
   },
 } as CreateFetchOptions)
