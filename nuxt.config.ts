@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
   meta: {
@@ -8,12 +8,7 @@ export default defineNuxtConfig({
     link: [],
     style: [],
   },
-  buildModules: [
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@pinia/nuxt',
-    'nuxt-windicss',
-  ],
+  buildModules: ['@vueuse/nuxt', '@pinia/nuxt', 'nuxt-windicss'],
   vueuse: {
     ssrHandlers: true,
   },
@@ -22,5 +17,5 @@ export default defineNuxtConfig({
       target: 'https://api.123mtr.top',
       changeOrigin: true,
     },
-  }
-})
+  },
+});

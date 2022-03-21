@@ -1,21 +1,14 @@
-import { defineConfig } from 'windicss/helpers'
+import { defineConfig } from 'windicss/helpers';
 
 export default defineConfig({
   darkMode: 'class',
-  theme: {
-    screens: {
-      '2xl': { max: '1535px' },
-      'sm': { min: '640px', max: '767px' },
-    },
-  },
+  theme: {},
   extract: {
     include: ['**/*.{vue,html,jsx,tsx}'],
     exclude: ['node_modules', '.git'],
   },
   variants: {
-    scrollbar: ['dark']
+    scrollbar: ['dark'],
   },
-  plugins: [
-    require('@windicss/plugin-scrollbar'),
-  ]
-})
+  plugins: [require('@windicss/plugin-scrollbar')],
+});

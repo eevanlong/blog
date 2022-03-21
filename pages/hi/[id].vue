@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { useUserStore } from '~/stores/user'
 
 const route = useRoute()
@@ -44,4 +44,4 @@ watchEffect(() => {
       </NuxtLink>
     </div>
   </div>
-</template>
+</template> -->
