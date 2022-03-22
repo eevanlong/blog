@@ -9,14 +9,16 @@
 <template>
   <div>
     <Header />
-    <Article class="space-y-6" />
-    <Article />
-    <Article />
-    <Article />
-    <Article />
-    <Article />
-    <Article />
-    <Article />
-    <!-- <Paging /> -->
+    <main class="space-y-12 mt-10">
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Paging />
+    </main>
   </div>
 </template>
